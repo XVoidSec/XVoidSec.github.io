@@ -1,12 +1,13 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lord0x</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     body {
-      margin: 0;
+      margin: 0; padding: 0;
       background-color: #0d0d0d;
       color: #eaeaea;
       font-family: 'Courier New', monospace;
@@ -16,56 +17,64 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
-    }h1 {
-  color: #ff3c3c;
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-p {
-  font-size: 1.1rem;
-  color: #c0c0c0;
-  margin-bottom: 30px;
-}
-
-.btn {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 1rem;
-  border: 1px solid #ff3c3c;
-  background: transparent;
-  color: #ff3c3c;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #ff3c3c;
-  color: #fff;
-}
-
-.footer {
-  position: absolute;
-  bottom: 20px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-a {
-  color: #ff3c3c;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+    }
+    h1 {
+      color: #ff3c3c;
+      font-size: 3.5rem;
+      margin-bottom: 0.2em;
+    }
+    p {
+      color: #c0c0c0;
+      font-size: 1.2rem;
+      margin-bottom: 2em;
+    }
+    .btn {
+      background: transparent;
+      border: 2px solid #ff3c3c;
+      color: #ff3c3c;
+      padding: 12px 28px;
+      margin: 0 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      user-select: none;
+    }
+    .btn:hover {
+      background: #ff3c3c;
+      color: #fff;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      .btn {
+        margin: 10px 0;
+        width: 80%;
+      }
+      body {
+        justify-content: flex-start;
+        padding-top: 50px;
+        height: auto;
+      }
+    }
+    .footer {
+      position: fixed;
+      bottom: 15px;
+      font-size: 0.85rem;
+      color: #666;
+      width: 100%;
+      text-align: center;
+    }
   </style>
 </head>
-<body>  <h1>Lord0x</h1>
-  <p>Silent now. But soon... the game changes.</p>  <div>
-    <button class="btn" onclick="alert('Tools section coming soon...')">Tools</button>
-  </div>  <p>Or email me directly at <a href="mailto:Lord0x@proton.me">Lord0x@proton.me</a></p>  <div class="footer">
-    &copy; 2025 Lord0x | All rights reserved.
-  </div></body>
+<body>
+  <h1>Lord0x</h1>
+  <p>Silent now. But soon... the game changes.</p>
+  <div>
+    <button class="btn" onclick="location.href='tools.html'">Tools</button>
+    <button class="btn" onclick="location.href='contact.html'">Contact</button>
+  </div>
+  <div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
+</body>
 </html>
