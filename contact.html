@@ -3,53 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact - Lord0x</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Contact Lord0x</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
   <style>
+    :root {
+      --primary-color: #0ff;
+      --bg-color: #0a0a0a;
+      --accent-color: #09f;
+      --text-color: #e6e6e6;
+      --glass: rgba(255,255,255,0.05);
+    }
+
     body {
-      margin: 0; padding: 30px;
-      background-color: #0d0d0d;
-      color: #eaeaea;
-      font-family: 'Courier New', monospace;
-      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 60px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
+      min-height: 100vh;
     }
+
     h1 {
-      color: #ff3c3c;
-      margin-bottom: 1em;
+      color: var(--primary-color);
+      font-size: 3rem;
+      margin-bottom: 30px;
     }
-    a {
-      color: #ff3c3c;
-      text-decoration: none;
-      font-size: 1.2rem;
-      margin: 10px 0;
-      display: inline-block;
-      transition: color 0.3s;
-    }
-    a:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
-    .footer {
-      position: fixed;
-      bottom: 15px;
-      font-size: 0.85rem;
-      color: #666;
+
+    form {
+      background-color: #111;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      max-width: 400px;
       width: 100%;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #222;
+      color: var(--text-color);
+      resize: vertical;
+      font-size: 1rem;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid var(--accent-color);
+    }
+
+    button {
+      background-color: var(--accent-color);
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #0077cc;
+    }
+
+    .footer {
+      margin-top: auto;
+      color: #777;
+      font-size: 0.9rem;
       text-align: center;
+      padding: 20px 0;
     }
   </style>
 </head>
 <body>
+
   <h1>Contact Lord0x</h1>
 
-  <p>Email: <a href="mailto:Lord0x@proton.me">Lord0x@proton.me</a></p>
-  <p>ProtonMail: <a href="mailto:Lord0x@proton.me">Lord0x@proton.me</a></p>
-  <p>Telegram: <a href="https://t.me/Lord0x" target="_blank" rel="noopener noreferrer">@Lord0x</a></p>
+  <form action="mailto:Lord0x@proton.me" method="POST" enctype="text/plain">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name" placeholder="Your name" required />
 
-  <div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="Email" placeholder="Your email" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="Message" rows="6" placeholder="Your message..." required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="footer">&copy; 2025 Lord0x | Digital Fortress</div>
+
 </body>
 </html>
