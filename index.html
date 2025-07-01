@@ -2,62 +2,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lord0x - Mini Ice Dark with Sidebar</title>
-  <link rel="icon" href="https://f.top4top.io/p_3469049211.jpg" />
+  <title>Lord0x - Mini Ice Dark</title>
+  <link rel="icon" href="https://b.top4top.io/p_3469eyc0r1.jpg" />
   <style>
     body {
       margin: 0;
       background-color: #1f1f1f;
       color: #e0e0e0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-    }/* Sidebar */
-.sidebar {
-  width: 260px;
-  height: 90vh;
-  background-color: #2e2e2e;
-  padding: 40px 20px;
-  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    }header {
   display: flex;
-  flex-direction: column;
-}
-
-.sidebar h2 {
-  color: #7abaff;
-  margin-bottom: 30px;
-  font-size: 1.6rem;
-  text-align: center;
-}
-
-.sidebar a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-size: 1.1rem;
-  margin: 15px 0;
-  padding: 10px;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
-.sidebar a:hover {
-  background-color: #4a90e2;
-  color: #ffffff;
-}
-
-/* Main content */
-.main {
-  flex-grow: 1;
-  padding: 60px 40px;
-  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #292929;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 h1 {
   color: #7abaff;
-  font-size: 3rem;
-  margin-bottom: 20px;
+  margin: 0;
+  font-size: 2rem;
 }
 
-p {
+.menu-btn {
+  font-size: 1.6rem;
+  color: #e0e0e0;
+  background: none;
+  border: 2px solid #4a90e2;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background-color: #2e2e2e;
+  padding: 60px 20px;
+  box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 20px 0;
+  transition: color 0.2s;
+}
+
+.sidebar a:hover {
+  color: #4a90e2;
+}
+
+.main {
+  padding: 140px 30px 60px 30px;
+  text-align: center;
+}
+
+.main p {
   font-size: 1.2rem;
   color: #cccccc;
   margin-bottom: 2em;
@@ -65,7 +81,7 @@ p {
 
 .btn {
   padding: 12px 30px;
-  margin: 10px;
+  margin: 5px;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
@@ -80,23 +96,53 @@ p {
 }
 
 .footer {
-  margin-top: 60px;
+  margin-top: 50px;
   font-size: 0.9rem;
   color: #777;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.gallery img {
+  max-width: 280px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
   </style>
 </head>
-<body>  <div class="sidebar">
-    <h2>Menu</h2>
-    <a href="#">Services</a>
-    <a href="#">Projects</a>
+<body>  <header>
+    <h1>Lord0x</h1>
+    <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
+  </header>  <div class="sidebar" id="sidebar">
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
     <a href="contact.html">Contact</a>
   </div>  <div class="main">
-    <h1>Lord0x</h1>
     <p>Shaping the future in silence.</p>
     <button class="btn" onclick="location.href='tools.html'">Tools</button>
-    <button class="btn" onclick="location.href='contact.html'">Contact</button>
-    <div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
-  </div></body>
+    <button class="btn" onclick="location.href='contact.html'">Contact</button><div class="gallery">
+  <img src="img1.jpg" alt="Preview 1">
+  <img src="img2.jpg" alt="Preview 2">
+  <img src="img3.jpg" alt="Preview 3">
+</div>
+
+<div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
+
+  </div>  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+    }
+  </script></body>
 </html>
