@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lord0x - Mini Ice Dark</title>
+  <title>Lord0x - Mini Ice Dark with Menu</title>
   <link rel="icon" href="favicon.png" />
   <style>
     body {
@@ -10,19 +10,71 @@
       background-color: #1f1f1f;
       color: #e0e0e0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       height: 100vh;
-      text-align: center;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #292929;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
     }
     h1 {
       color: #7abaff;
-      font-size: 3rem;
-      margin-bottom: 10px;
+      margin: 0;
+      font-size: 2rem;
     }
-    p {
+    .menu-btn {
+      font-size: 1.8rem;
+      color: #e0e0e0;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #2b2b2b;
+      padding: 60px 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+    .sidebar a {
+      display: block;
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 20px 0;
+      transition: color 0.2s;
+    }
+    .sidebar a:hover {
+      color: #4a90e2;
+    }
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 1.5rem;
+      color: #999;
+      cursor: pointer;
+    }
+    .content {
+      margin-top: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .content p {
       font-size: 1.2rem;
       color: #cccccc;
       margin-bottom: 2em;
@@ -42,18 +94,31 @@
       background-color: #357ab7;
     }
     .footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 50px;
       font-size: 0.9rem;
       color: #777;
     }
   </style>
 </head>
-<body>  <h1>Lord0x</h1>
-  <p>Shaping the future in silence.</p>  <div>
+<body>  <header>
+    <h1>Lord0x</h1>
+    <button class="menu-btn" onclick="openSidebar()">☰</button>
+  </header>  <div class="sidebar" id="sidebar">
+    <span class="close-btn" onclick="closeSidebar()">&times;</span>
+    <a href="#">🛠️ أدواتنا</a>
+    <a href="#">📄 مشاريع</a>
+    <a href="contact.html">💬 تواصل معنا</a>
+  </div>  <div class="content">
+    <p>Shaping the future in silence.</p>
     <button class="btn" onclick="location.href='tools.html'">Tools</button>
     <button class="btn" onclick="location.href='contact.html'">Contact</button>
-  </div>  <div class="footer">
-    &copy; 2025 Lord0x | All rights reserved.
-  </div></body>
+    <div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
+  </div>  <script>
+    function openSidebar() {
+      document.getElementById('sidebar').style.left = '0';
+    }
+    function closeSidebar() {
+      document.getElementById('sidebar').style.left = '-250px';
+    }
+  </script></body>
 </html>
