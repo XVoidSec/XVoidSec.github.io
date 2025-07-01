@@ -1,72 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tools - Lord0x</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lord0x Tools</title>
+  <link rel="icon" href="favicon.png" type="image/png">
   <style>
-    body {
-      margin: 0; padding: 20px;
-      background-color: #0d0d0d;
-      color: #eaeaea;
-      font-family: 'Courier New', monospace;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    h1 {
-      color: #ff3c3c;
-      margin-bottom: 0.5em;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      width: 100%;
-    }
-    li {
-      background: #1a1a1a;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 6px;
-      border: 1px solid #ff3c3c;
-      cursor: default;
-      font-size: 1.1rem;
-      transition: background 0.3s;
-    }
-    li:hover {
-      background: #ff3c3c;
-      color: #fff;
-    }
-    .btn-back {
-      margin-top: 30px;
-      padding: 10px 25px;
-      font-size: 1rem;
-      border: 2px solid #ff3c3c;
-      background: transparent;
-      color: #ff3c3c;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s, color 0.3s;
-      user-select: none;
-    }
-    .btn-back:hover {
-      background: #ff3c3c;
-      color: #fff;
-    }
+    :root {
+      --primary-color: #0ff;
+      --bg-color: #0a0a0a;
+      --accent-color: #09f;
+      --text-color: #e6e6e6;
+      --glass: rgba(255,255,255,0.05);
+    }body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 60px 20px;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 3rem;
+}
+
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.tool {
+  background-color: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 0 12px rgba(0,255,255,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tool:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 18px rgba(0,255,255,0.3);
+}
+
+.tool h2 {
+  color: var(--accent-color);
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.tool p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
   </style>
 </head>
-<body>
-  <h1>Tools (Coming Soon)</h1>
-  <ul>
-    <li>FTP Exploit Script (under development)</li>
-    <li>Recon Scanner (coming soon)</li>
-    <li>Dark Web Scraper (planned)</li>
-    <li>Custom Payload Generator (soon)</li>
-  </ul>
-  <button class="btn-back" onclick="location.href='index.html'">Back to Home</button>
-</body>
+<body>  <h1>Tools by Lord0x</h1>  <div class="tools-container">
+    <div class="tool">
+      <h2>SubDomain Finder</h2>
+      <p>Find hidden subdomains using DNS brute force with advanced pattern detection.</p>
+    </div><div class="tool">
+  <h2>Port Scanner</h2>
+  <p>Fast and stealthy scanner for open ports using socket and SYN scanning.</p>
+</div>
+
+<div class="tool">
+  <h2>Payload Generator</h2>
+  <p>Generate customized XSS, LFI, RCE, and SQLi payloads on demand.</p>
+</div>
+
+<div class="tool">
+  <h2>Directory Fuzzer</h2>
+  <p>Scan and fuzz hidden directories with wordlists and smart filtering.</p>
+</div>
+
+  </div>  <div class="footer">&copy; 2025 Lord0x | Digital tools from the shadows.</div></body>
 </html>
