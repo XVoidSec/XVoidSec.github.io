@@ -15,7 +15,7 @@
     }
     header {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       padding: 20px;
       background-color: #292929;
@@ -26,26 +26,31 @@
     }
     h1 {
       color: #7abaff;
-      margin: 0;
+      margin: 0 20px;
       font-size: 2rem;
     }
     .menu-btn {
       font-size: 1.8rem;
       color: #e0e0e0;
       background: none;
-      border: none;
+      border: 2px solid #4a90e2;
+      padding: 8px 16px;
+      border-radius: 6px;
       cursor: pointer;
+      margin-left: auto;
+      margin-right: 20px;
     }
     .sidebar {
       position: fixed;
       top: 0;
-      left: 0;
+      right: 0;
       width: 260px;
       height: 100%;
       background-color: #2e2e2e;
       padding: 80px 20px 20px 20px;
-      box-shadow: 3px 0 10px rgba(0,0,0,0.3);
+      box-shadow: -3px 0 10px rgba(0,0,0,0.3);
       z-index: 999;
+      display: none;
     }
     .sidebar a {
       display: block;
@@ -60,7 +65,6 @@
       color: #4a90e2;
     }
     .content {
-      margin-left: 280px;
       padding: 140px 40px 40px 40px;
       text-align: center;
     }
@@ -92,7 +96,7 @@
 </head>
 <body>  <header>
     <h1>Lord0x</h1>
-    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
   </header>  <div class="sidebar" id="sidebar">
     <a href="#">Services</a>
     <a href="#">Projects</a>
@@ -105,11 +109,7 @@
   </div>  <script>
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
-      if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-        sidebar.style.display = 'block';
-      } else {
-        sidebar.style.display = 'none';
-      }
+      sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
     }
   </script></body>
 </html>
