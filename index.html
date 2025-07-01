@@ -39,13 +39,12 @@
     .sidebar {
       position: fixed;
       top: 0;
-      left: -250px;
-      width: 250px;
+      left: 0;
+      width: 260px;
       height: 100%;
-      background-color: #2b2b2b;
-      padding: 60px 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-      transition: left 0.3s ease;
+      background-color: #2e2e2e;
+      padding: 80px 20px 20px 20px;
+      box-shadow: 3px 0 10px rgba(0,0,0,0.3);
       z-index: 999;
     }
     .sidebar a {
@@ -55,23 +54,14 @@
       font-size: 1.1rem;
       margin: 20px 0;
       transition: color 0.2s;
+      padding-left: 10px;
     }
     .sidebar a:hover {
       color: #4a90e2;
     }
-    .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      font-size: 1.5rem;
-      color: #999;
-      cursor: pointer;
-    }
     .content {
-      margin-top: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      margin-left: 280px;
+      padding: 140px 40px 40px 40px;
       text-align: center;
     }
     .content p {
@@ -102,23 +92,24 @@
 </head>
 <body>  <header>
     <h1>Lord0x</h1>
-    <button class="menu-btn" onclick="openSidebar()">☰</button>
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
   </header>  <div class="sidebar" id="sidebar">
-    <span class="close-btn" onclick="closeSidebar()">&times;</span>
-    <a href="#">🛠️ أدواتنا</a>
-    <a href="#">📄 مشاريع</a>
-    <a href="contact.html">💬 تواصل معنا</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+    <a href="contact.html">Contact</a>
   </div>  <div class="content">
     <p>Shaping the future in silence.</p>
     <button class="btn" onclick="location.href='tools.html'">Tools</button>
     <button class="btn" onclick="location.href='contact.html'">Contact</button>
     <div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
   </div>  <script>
-    function openSidebar() {
-      document.getElementById('sidebar').style.left = '0';
-    }
-    function closeSidebar() {
-      document.getElementById('sidebar').style.left = '-250px';
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+        sidebar.style.display = 'block';
+      } else {
+        sidebar.style.display = 'none';
+      }
     }
   </script></body>
 </html>
