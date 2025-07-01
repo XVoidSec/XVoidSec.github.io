@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lord0x - Mini Ice Dark with Menu</title>
+  <title>Lord0x - Mini Ice Dark with Sidebar</title>
   <link rel="icon" href="favicon.png" />
   <style>
     body {
@@ -10,106 +10,93 @@
       background-color: #1f1f1f;
       color: #e0e0e0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
-      overflow-x: hidden;
-    }
-    header {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 20px;
-      background-color: #292929;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    h1 {
-      color: #7abaff;
-      margin: 0 20px;
-      font-size: 2rem;
-    }
-    .menu-btn {
-      font-size: 1.8rem;
-      color: #e0e0e0;
-      background: none;
-      border: 2px solid #4a90e2;
-      padding: 8px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-left: auto;
-      margin-right: 20px;
-    }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 260px;
-      height: 100%;
-      background-color: #2e2e2e;
-      padding: 80px 20px 20px 20px;
-      box-shadow: -3px 0 10px rgba(0,0,0,0.3);
-      z-index: 999;
-      display: none;
-    }
-    .sidebar a {
-      display: block;
-      color: #e0e0e0;
-      text-decoration: none;
-      font-size: 1.1rem;
-      margin: 20px 0;
-      transition: color 0.2s;
-      padding-left: 10px;
-    }
-    .sidebar a:hover {
-      color: #4a90e2;
-    }
-    .content {
-      padding: 140px 40px 40px 40px;
-      text-align: center;
-    }
-    .content p {
-      font-size: 1.2rem;
-      color: #cccccc;
-      margin-bottom: 2em;
-    }
-    .btn {
-      padding: 12px 30px;
-      margin: 5px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #4a90e2;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background-color: #357ab7;
-    }
-    .footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #777;
-    }
+    }/* Sidebar */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background-color: #2e2e2e;
+  padding: 40px 20px;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  color: #7abaff;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.sidebar a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background-color: #4a90e2;
+  color: #ffffff;
+}
+
+/* Main content */
+.main {
+  flex-grow: 1;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+h1 {
+  color: #7abaff;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-bottom: 2em;
+}
+
+.btn {
+  padding: 12px 30px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #357ab7;
+}
+
+.footer {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
   </style>
 </head>
-<body>  <header>
-    <h1>Lord0x</h1>
-    <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
-  </header>  <div class="sidebar" id="sidebar">
+<body>  <div class="sidebar">
+    <h2>Menu</h2>
     <a href="#">Services</a>
     <a href="#">Projects</a>
     <a href="contact.html">Contact</a>
-  </div>  <div class="content">
+  </div>  <div class="main">
+    <h1>Lord0x</h1>
     <p>Shaping the future in silence.</p>
     <button class="btn" onclick="location.href='tools.html'">Tools</button>
     <button class="btn" onclick="location.href='contact.html'">Contact</button>
     <div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
-  </div>  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
-    }
-  </script></body>
+  </div></body>
 </html>
