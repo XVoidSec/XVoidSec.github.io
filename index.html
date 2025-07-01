@@ -1,54 +1,69 @@
 <!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lord0x - Mini Ice Dark</title>
-  <link rel="icon" href="https://d.top4top.io/p_3469qdrnz1.jpg" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lord0x - Digital Fortress</title>
+  <link rel="icon" href="favicon.png" type="image/png">
   <style>
-    body {
-      margin: 0;
-      background-color: #1f1f1f;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      overflow-x: hidden;
-    }header {
+    :root {
+      --primary-color: #0ff;
+      --bg-color: #0a0a0a;
+      --accent-color: #09f;
+      --text-color: #e6e6e6;
+      --glass: rgba(255,255,255,0.05);
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: #000000aa;
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #292929;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000;
+  border-bottom: 1px solid #333;
 }
 
-h1 {
-  color: #7abaff;
-  margin: 0;
+.logo {
   font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 .menu-btn {
-  font-size: 1.6rem;
-  color: #e0e0e0;
+  font-size: 1.4rem;
   background: none;
-  border: 2px solid #4a90e2;
-  padding: 6px 14px;
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
   border-radius: 6px;
+  padding: 6px 12px;
   cursor: pointer;
 }
 
 .sidebar {
   position: fixed;
   top: 0;
-  left: -260px;
-  width: 260px;
+  left: -250px;
+  width: 250px;
   height: 100%;
-  background-color: #2e2e2e;
-  padding: 60px 20px;
-  box-shadow: 3px 0 10px rgba(0,0,0,0.3);
-  transition: left 0.3s ease;
+  background: #0f0f0f;
+  border-right: 1px solid #222;
+  padding-top: 80px;
+  transition: 0.3s ease-in-out;
   z-index: 999;
 }
 
@@ -58,48 +73,50 @@ h1 {
 
 .sidebar a {
   display: block;
-  color: #e0e0e0;
+  padding: 15px 30px;
+  color: var(--text-color);
   text-decoration: none;
-  font-size: 1.1rem;
-  margin: 20px 0;
-  transition: color 0.2s;
+  transition: background 0.2s;
 }
 
 .sidebar a:hover {
-  color: #4a90e2;
+  background-color: var(--glass);
+  color: var(--accent-color);
 }
 
-.main {
-  padding: 140px 30px 60px 30px;
+main {
+  padding: 120px 40px 60px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.main p {
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+p {
   font-size: 1.2rem;
-  color: #cccccc;
-  margin-bottom: 2em;
+  margin-bottom: 30px;
+  color: #ccc;
 }
 
 .btn {
+  background-color: var(--accent-color);
+  color: #fff;
   padding: 12px 30px;
-  margin: 5px;
+  margin: 10px;
   font-size: 1rem;
   border: none;
   border-radius: 8px;
-  background-color: #4a90e2;
-  color: white;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .btn:hover {
-  background-color: #357ab7;
-}
-
-.footer {
-  margin-top: 50px;
-  font-size: 0.9rem;
-  color: #777;
+  background-color: #0077cc;
 }
 
 .gallery {
@@ -110,10 +127,10 @@ h1 {
 }
 
 .gallery img {
-  max-width: 280px;
-  margin: 15px;
+  max-width: 300px;
+  margin: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
   transition: transform 0.3s;
 }
 
@@ -121,29 +138,40 @@ h1 {
   transform: scale(1.05);
 }
 
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #222;
+}
+
   </style>
 </head>
 <body>  <header>
+    <div class="logo">Lord0x</div>
     <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
-    <h1>Lord0x</h1>
   </header>  <div class="sidebar" id="sidebar">
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
     <a href="contact.html">Contact</a>
-  </div>  <div class="main">
-    <p>Shaping the future in silence.</p>
-    <button class="btn" onclick="location.href='tools.html'">Tools</button>
-    <button class="btn" onclick="location.href='contact.html'">Contact</button><div class="gallery">
-  <img src="img1.jpg" alt="Preview 1">
-  <img src="img2.jpg" alt="Preview 2">
-  <img src="img3.jpg" alt="Preview 3">
+  </div>  <main>
+    <h1>Digital Fortress</h1>
+    <p>Cyber presence of Lord0x - we break silently, build privately, and rise in shadows.</p><button class="btn" onclick="location.href='tools.html'">Explore Tools</button>
+<button class="btn" onclick="location.href='contact.html'">Reach Out</button>
+
+<div class="gallery">
+  <img src="img1.jpg" alt="Showcase 1">
+  <img src="img2.jpg" alt="Showcase 2">
+  <img src="img3.jpg" alt="Showcase 3">
 </div>
 
-<div class="footer">&copy; 2025 Lord0x | All rights reserved.</div>
+<div class="footer">&copy; 2025 Lord0x | Crafted in the shadows.</div>
 
-  </div>  <script>
+  </main>  <script>
     function toggleSidebar() {
-      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById("sidebar").classList.toggle("open");
     }
   </script></body>
 </html>
