@@ -6,179 +6,188 @@
   <link rel="icon" href="https://d.top4top.io/p_3469qdrnz1.jpg" type="image/png">
   <style>
     :root {
-      --primary-color: #0ff;
-      --bg-color: #0a0a0a;
-      --accent-color: #09f;
-      --text-color: #e6e6e6;
-      --glass: rgba(255,255,255,0.05);
-    }* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      --bg-color: #0e0e0e;
+      --text-color: #dddddd;
+      --secondary-text: #aaaaaa;
+      --card-bg: #1a1a1a;
+      --border-color: #333;
+      --hover-bg: #2a2a2a;
+      --button-bg: #444;
+      --button-hover: #666;
+      --accent: #fff;
+    }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-header {
-  background-color: #000000aa;
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  border-bottom: 1px solid #333;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
 
-.logo {
-  font-size: 2rem;
-  color: var(--primary-color);
-  font-weight: bold;
-}
+    header {
+      background-color: #121212dd;
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-.menu-btn {
-  font-size: 1.4rem;
-  background: none;
-  color: var(--text-color);
-  border: 2px solid var(--accent-color);
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-}
+    .logo {
+      font-size: 2rem;
+      color: var(--accent);
+      font-weight: bold;
+    }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100%;
-  background: #0f0f0f;
-  border-right: 1px solid #222;
-  padding-top: 80px;
-  transition: 0.3s ease-in-out;
-  z-index: 999;
-}
+    .menu-btn {
+      font-size: 1.2rem;
+      background: none;
+      color: var(--text-color);
+      border: 1px solid var(--button-bg);
+      border-radius: 6px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
 
-.sidebar.open {
-  left: 0;
-}
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #141414;
+      border-right: 1px solid var(--border-color);
+      padding-top: 80px;
+      transition: 0.3s ease-in-out;
+      z-index: 999;
+    }
 
-.sidebar a {
-  display: block;
-  padding: 15px 30px;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: background 0.2s;
-}
+    .sidebar.open {
+      left: 0;
+    }
 
-.sidebar a:hover {
-  background-color: var(--glass);
-  color: var(--accent-color);
-}
+    .sidebar a {
+      display: block;
+      padding: 15px 30px;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: background 0.2s;
+    }
 
-main {
-  padding: 120px 40px 60px 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
+    .sidebar a:hover {
+      background-color: var(--hover-bg);
+      color: var(--accent);
+    }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-  color: var(--primary-color);
-}
+    main {
+      padding: 120px 40px 60px 40px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #ccc;
-}
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
 
-.btn {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 12px 30px;
-  margin: 10px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: var(--secondary-text);
+    }
 
-.btn:hover {
-  background-color: #0077cc;
-}
+    .btn {
+      background-color: var(--button-bg);
+      color: var(--accent);
+      padding: 12px 30px;
+      margin: 10px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
 
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 40px;
-}
+    .btn:hover {
+      background-color: var(--button-hover);
+    }
 
-.gallery img {
-  max-width: 300px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,255,255,0.2);
-  transition: transform 0.3s;
-}
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
 
-.gallery img:hover {
-  transform: scale(1.05);
-}
+    .gallery img {
+      max-width: 300px;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.06);
+      transition: transform 0.3s;
+    }
 
-.footer {
-  text-align: center;
-  margin-top: 60px;
-  padding: 20px;
-  font-size: 0.9rem;
-  color: #888;
-  border-top: 1px solid #222;
-}
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: var(--secondary-text);
+      border-top: 1px solid var(--border-color);
+    }
   </style>
 </head>
 <body>  
   <header>
-    <div class="logo">Lord0x</div>
+    <div class="logo">XVoid</div>
     <button class="menu-btn" onclick="toggleSidebar()">☰ Menu</button>
-  </header>  <div class="sidebar" id="sidebar">
-    <a href="#services"></a>
+  </header>
+
+  <div class="sidebar" id="sidebar">
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
     <a href="contact.html">Contact</a>
-  </div>  <main>
+  </div>
+
+  <main>
     <h1>XVoidSec</h1>
-    <p>Best Hacking Platform You Will See, I Promis :)</p>
+    <p>The Ultimate Gray-Zone Hacking Platform</p>
+
     <div>
       <button class="btn" onclick="location.href='tools.html'">Explore Projects</button>
-    </div>
-    <div>
       <button class="btn" onclick="location.href='free.html'">Free Projects</button>
     </div>
 
-<div class="gallery">
-  <img src="https://f.top4top.io/p_3469qvmh21.png" alt="Showcase 1">
-  <img src="https://d.top4top.io/p_3469g9dvs1.png" alt="Showcase 2">
-  <img src="https://l.top4top.io/p_3470q24ii1.png" alt="Showcase 3">
-</div>
+    <div class="gallery">
+      <img src="https://f.top4top.io/p_3469qvmh21.png" alt="Showcase 1">
+      <img src="https://d.top4top.io/p_3469g9dvs1.png" alt="Showcase 2">
+      <img src="https://l.top4top.io/p_3470q24ii1.png" alt="Showcase 3">
+    </div>
 
-<div class="footer">&copy; 2025 By Lord0x | Crafted in the shadows.</div>
+    <div class="footer">&copy; 2025 XVoidSec | Built by Lord0x in the depths of the graynet.</div>
+  </main>
 
-  </main>  <script>
+  <script>
     function toggleSidebar() {
       document.getElementById("sidebar").classList.toggle("open");
     }
-  </script></body>
+  </script>
+</body>
 </html>
