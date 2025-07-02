@@ -1,113 +1,87 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
+<!-- tools.html --><!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lord0x Tools</title>
-  <link rel="icon" href="favicon.png" type="image/png">
+  <title>Tools - XVoid</title>
+  <link rel="icon" href="https://d.top4top.io/p_3469qdrnz1.jpg" type="image/png">
   <style>
     :root {
-      --primary-color: #0ff;
-      --bg-color: #0a0a0a;
-      --accent-color: #09f;
-      --text-color: #e6e6e6;
-      --glass: rgba(255,255,255,0.05);
-    }body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 60px 20px;
-}
-
-h1 {
-  color: var(--primary-color);
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 3rem;
-}
-
-.tools-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.tool {
-  background-color: #111;
-  border: 1px solid #333;
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 0 12px rgba(0,255,255,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: left;
-}
-
-.tool:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 18px rgba(0,255,255,0.3);
-}
-
-.tool h2 {
-  color: var(--accent-color);
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
-
-.tool p {
-  font-size: 0.95rem;
-  color: #ccc;
-  margin-bottom: 10px;
-}
-
-.tool a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: var(--accent-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-.tool a:hover {
-  background-color: #0077cc;
-}
-
-.footer {
-  text-align: center;
-  margin-top: 60px;
-  color: #777;
-  font-size: 0.9rem;
-}
-
+      --bg-color: #0e0e0e;
+      --text-color: #dddddd;
+      --secondary-text: #aaaaaa;
+      --card-bg: #1a1a1a;
+      --border-color: #333;
+      --hover-bg: #2a2a2a;
+      --button-bg: #444;
+      --button-hover: #666;
+      --accent: #fff;
+    }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+    header {
+      background-color: #121212dd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .logo { font-size: 2rem; color: var(--accent); font-weight: bold; }
+    .btn {
+      background-color: var(--button-bg);
+      color: var(--accent);
+      padding: 10px 20px;
+      margin: 10px 5px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover { background-color: var(--button-hover); }
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 40px;
+      text-align: center;
+    }
+    .tool-card {
+      background: var(--card-bg);
+      padding: 20px;
+      margin: 20px auto;
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      max-width: 600px;
+      text-align: left;
+    }
+    .tool-card h3 {
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .tool-card p {
+      color: var(--secondary-text);
+    }
   </style>
 </head>
-<body>  <h1>Tools by Lord0x</h1>  <div class="tools-container">
-    <div class="tool">
-      <h2>BRATVA FrameWork</h2>
-      <p>Hacking features & functions in same where...</p>
-      <a href="tools/bratva.html">View Tool</a>
-    </div><div class="tool">
-  <h2>Port Scanner</h2>
-  <p>Fast and stealthy scanner for open ports using socket and SYN scanning.</p>
-  <a href="tools/port-scanner.html">View Tool</a>
-</div>
-
-<div class="tool">
-  <h2>Payload Generator</h2>
-  <p>Generate customized XSS, LFI, RCE, and SQLi payloads on demand.</p>
-  <a href="tools/payload-generator.html">View Tool</a>
-</div>
-
-<div class="tool">
-  <h2>Directory Fuzzer</h2>
-  <p>Scan and fuzz hidden directories with wordlists and smart filtering.</p>
-  <a href="tools/dir-fuzzer.html">View Tool</a>
-</div>
-
-  </div>  <div class="footer">&copy; 2025 Lord0x | Digital tools from the shadows.</div></body>
+<body>
+  <header><div class="logo">XVoid Tools</div></header>
+  <main>
+    <h1>Available Tools</h1>
+    <div class="tool-card">
+      <h3>BRATVA Scanner</h3>
+      <p>Advanced network scanner with stealth features. Ideal for LAN reconnaissance and service mapping.</p>
+      <button class="btn" onclick="location.href='tools/bratva.html'">View Tool</button>
+    </div>
+    <div class="tool-card">
+      <h3>PortGhost</h3>
+      <p>Simple port scanner that can sweep IPv4/IPv6 ranges with custom configuration and stealth delays.</p>
+      <button class="btn">View Tool</button>
+    </div>
+  </main>
+</body>
 </html>
