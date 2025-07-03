@@ -23,6 +23,25 @@
       background-color: var(--bg-color);
       color: var(--text-color);
     }
+
+    .home-btn {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: transparent;
+      color: #00c8ff;
+      border: 1px solid #00c8ff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    
+    .home-btn:hover {
+      background-color: #00c8ff;
+      color: #000;
+    }
+    
     header {
       background-color: #121212dd;
       display: flex;
@@ -69,7 +88,10 @@
   </style>
 </head>
 <body>
-  <header><div class="logo">XVoid Tools</div></header>
+  <header>
+    <div class="logo">XVoid Tools</div>
+    <div><a href="index.html" class="home-btn">🏠 Home</a></div>
+  </header>
   <main>
     <h1>Available Tools</h1>
     <div class="tool-card">
