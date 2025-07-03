@@ -2,113 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Lord0x</title>
-  <link rel="icon" href="favicon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | XVoidSec</title>
+  <link rel="icon" href="https://d.top4top.io/p_3469qdrnz1.jpg" type="image/png">
   <style>
     :root {
-      --primary-color: #0ff;
-      --bg-color: #0a0a0a;
-      --accent-color: #09f;
-      --text-color: #e6e6e6;
-      --glass: rgba(255,255,255,0.05);
+      --bg: #0e0e0e;
+      --text: #e0e0e0;
+      --accent: #00c8ff;
+      --border: #333;
     }
 
     body {
-      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      padding: 60px 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #111;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
       display: flex;
-      flex-direction: column;
       align-items: center;
-      min-height: 100vh;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    .back-btn {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: var(--accent);
+      color: #000;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 0 30px;
+      text-align: center;
     }
 
     h1 {
-      color: var(--primary-color);
-      font-size: 3rem;
-      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 20px;
     }
 
     form {
-      background-color: #111;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
-      max-width: 400px;
-      width: 100%;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
     }
 
     input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: none;
+      padding: 12px;
+      background-color: #1a1a1a;
+      border: 1px solid var(--border);
+      color: var(--text);
       border-radius: 6px;
-      background-color: #222;
-      color: var(--text-color);
-      resize: vertical;
       font-size: 1rem;
+      resize: none;
     }
 
     input:focus, textarea:focus {
-      outline: 2px solid var(--accent-color);
+      border-color: var(--accent);
+      outline: none;
     }
 
-    button {
-      background-color: var(--accent-color);
+    .submit-btn {
+      background-color: var(--accent);
       color: #fff;
+      padding: 12px;
+      font-size: 1rem;
       border: none;
-      padding: 12px 30px;
-      font-size: 1.1rem;
       border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 100%;
+      transition: background 0.3s;
     }
 
-    button:hover {
-      background-color: #0077cc;
+    .submit-btn:hover {
+      background-color: #00a4cc;
     }
 
-    .footer {
-      margin-top: auto;
-      color: #777;
-      font-size: 0.9rem;
+    footer {
       text-align: center;
-      padding: 20px 0;
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
 <body>
 
-  <h1>Contact Lord0x</h1>
+  <header>
+    <div class="logo">XVoidSec</div>
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </header>
 
-  <form action="mailto:Lord0x@proton.me" method="POST" enctype="text/plain">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="Name" placeholder="Your name" required />
+  <main>
+    <h1>Contact Us</h1>
+    <p>We're here to help. Send us a message and we’ll get back to you.</p>
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="Email" placeholder="Your email" required />
+    <form onsubmit="sendEmail(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="6" placeholder="Your Message..." required></textarea>
+      <button type="submit" class="submit-btn">Send</button>
+    </form>
+  </main>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="Message" rows="6" placeholder="Your message..." required></textarea>
+  <footer>
+    &copy; 2025 XVoidSec | Built by Lord0x.
+  </footer>
 
-    <button type="submit">Send Message</button>
-  </form>
-  <div>
-    Email: Lord0x@proton.me
-  </div>
-
-  <div class="footer">&copy; 2025 Lord0x | Digital Fortress</div>
-
+  <script>
+    function sendEmail(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const mailtoLink = `mailto:Lord0x@proton.me?subject=Message%20from%20${encodeURIComponent(name)}&body=Email:%20${encodeURIComponent(email)}%0A%0A${encodeURIComponent(message)}`;
+      window.location.href = mailtoLink;
+    }
+  </script>
 </body>
 </html>
