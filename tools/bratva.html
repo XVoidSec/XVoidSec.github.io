@@ -2,120 +2,136 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Buy BRATVA Tool - Lord0x</title>
-  <link rel="icon" href="../favicon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRATVA Tool | XVoid</title>
+  <link rel="icon" href="https://d.top4top.io/p_3469qdrnz1.jpg" type="image/png">
   <style>
     :root {
-      --primary-color: #0ff;
-      --bg-color: #0a0a0a;
-      --accent-color: #09f;
-      --text-color: #e6e6e6;
-      --glass: rgba(255,255,255,0.05);
+      --bg: #0e0e0e;
+      --text: #e0e0e0;
+      --accent: #ff0055;
+      --border: #333;
     }
-
     body {
-      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
+      margin: 0;
+      padding: 0;
     }
-
-    h1 {
-      color: var(--primary-color);
-      font-size: 3rem;
-      margin-bottom: 10px;
-      text-align: center;
+    header {
+      background: #111;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-
-    .price {
-      text-align: center;
-      font-size: 2rem;
-      color: #09f;
-      margin-bottom: 30px;
+    .logo {
+      font-size: 1.8rem;
       font-weight: bold;
+      color: var(--accent);
     }
-
+    .back-btn {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--accent);
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background-color: var(--accent);
+      color: #000;
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 30px;
+    }
+    h1 {
+      font-size: 2.6rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
     p.description {
       font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
       color: #ccc;
-      text-align: justify;
+      line-height: 1.6;
     }
-
     .gallery {
+      margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 15px;
       justify-content: center;
-      margin-bottom: 40px;
     }
-
     .gallery img {
-      max-width: 280px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.25);
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+      transition: transform 0.3s;
     }
-
     .gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
     }
-
+    .buy-section {
+      margin-top: 40px;
+      text-align: center;
+    }
     .buy-btn {
-      display: block;
-      max-width: 300px;
-      margin: 0 auto 60px auto;
-      padding: 16px 0;
-      background-color: var(--accent-color);
-      color: white;
-      font-size: 1.3rem;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: background-color 0.3s ease;
+      background-color: var(--accent);
+      color: #fff;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s;
     }
-
     .buy-btn:hover {
-      background-color: #0077cc;
+      background-color: #cc0044;
     }
-
-    .footer {
+    footer {
       text-align: center;
-      color: #777;
+      margin-top: 60px;
+      padding: 20px;
       font-size: 0.9rem;
-      padding-bottom: 40px;
+      color: #777;
+      border-top: 1px solid var(--border);
     }
   </style>
 </head>
 <body>
 
-  <h1>BRATVA Tool</h1>
+  <header>
+    <div class="logo">XVoid</div>
+    <a href="tools.html" class="back-btn">← Back to Tools</a>
+  </header>
 
-  <div class="price">$149.99 USD</div>
+  <main>
+    <h1>🛠 BRATVA Tool</h1>
+    <p class="description">
+      BRATVA is a powerful multi-function hacking tool designed for professionals. It combines advanced scanning, service fingerprinting, custom payloads, and more. Whether you're conducting pentesting or managing red team operations, BRATVA brings unmatched control and stealth.
+    </p>
 
-  <p class="description">
-    BRATVA is a professional-grade cybersecurity tool designed for stealthy reconnaissance and automated scanning.
-    Built with advanced algorithms, it helps security experts and ethical hackers discover vulnerabilities with precision and speed.
-    The tool supports modular extensions and is optimized for cross-platform usage.
-  </p>
+    <div class="gallery">
+      <img src="https://f.top4top.io/p_3469qvmh21.png" alt="BRATVA Screenshot 1">
+      <img src="https://d.top4top.io/p_3469g9dvs1.png" alt="BRATVA Screenshot 2">
+      <img src="https://l.top4top.io/p_3470q24ii1.png" alt="BRATVA Screenshot 3">
+    </div>
 
-  <div class="gallery">
-    <img src="../img/bratva1.png" alt="BRATVA Screenshot 1" />
-    <img src="../img/bratva2.png" alt="BRATVA Screenshot 2" />
-    <img src="../img/bratva3.png" alt="BRATVA Screenshot 3" />
-  </div>
+    <div class="buy-section">
+      <p><strong>Price:</strong> $49 (or crypto equivalent)</p>
+      <button class="buy-btn" onclick="location.href='mailto:Lord0x@proton.me?subject=BRATVA%20Tool%20Purchase'">
+        Buy Now
+      </button>
+    </div>
+  </main>
 
-  <a href="mailto:Lord0x@proton.me?subject=Purchase%20Inquiry%20for%20BRATVA&body=Hello%20Lord0x,%0AI%20am%20interested%20in%20purchasing%20the%20BRATVA%20tool.%20Please%20provide%20more%20details." class="buy-btn">Contact to Buy</a>
-
-  <div class="footer">&copy; 2025 Lord0x | Digital tools from the shadows.</div>
+  <footer>
+    &copy; 2025 XVoid | All rights reserved.
+  </footer>
 
 </body>
 </html>
