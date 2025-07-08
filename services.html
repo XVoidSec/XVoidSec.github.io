@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | XVoid</title>
+  <link rel="icon" href="https://d.top4top.io/p_3469qdrnz1.jpg" type="image/png" />
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --text: #e0e0e0;
+      --gray: #aaa;
+      --border: #222;
+      --hover: #1b1b1b;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px 40px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--text);
+    }
+
+    .back-btn {
+      color: var(--text);
+      text-decoration: none;
+      border: 1px solid var(--gray);
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background-color: var(--hover);
+    }
+
+    main {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      color: var(--gray);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service {
+      background-color: #111;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s ease;
+    }
+
+    .service:hover {
+      background-color: var(--hover);
+    }
+
+    .service h2 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .service p {
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .request-btn {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--gray);
+      padding: 8px 18px;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .request-btn:hover {
+      background-color: var(--hover);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">XVoid</div>
+    <a href="index.html" class="back-btn">← Home</a>
+  </header>
+
+  <main>
+    <h1>Hacking Services</h1>
+    <div class="service-grid">
+      
+      <div class="service">
+        <h2>🛠️ Penetration Testing</h2>
+        <p>Deep vulnerability analysis of websites, apps & networks. Full report provided with recommendations.</p>
+        <a href="contact.html" class="request-btn">📩 Request</a>
+      </div>
+
+      <div class="service">
+        <h2>🕵️ OSINT & Recon</h2>
+        <p>Target profiling using advanced open-source intelligence techniques. Social, digital, and technical.</p>
+        <a href="contact.html" class="request-btn">📩 Request</a>
+      </div>
+
+      <div class="service">
+        <h2>💣 Exploitation</h2>
+        <p>Custom exploit deployment on vulnerable systems. Focused on privilege escalation, RCE, and pivoting.</p>
+        <a href="contact.html" class="request-btn">📩 Request</a>
+      </div>
+
+      <div class="service">
+        <h2>🎯 Account Takeover</h2>
+        <p>High-success takeover service for weak or reused credentials (legal targets only).</p>
+        <a href="contact.html" class="request-btn">📩 Request</a>
+      </div>
+
+      <div class="service">
+        <h2>📁 Data Extraction</h2>
+        <p>Secure retrieval of target data including files, credentials, and chat logs from exposed servers.</p>
+        <a href="contact.html" class="request-btn">📩 Request</a>
+      </div>
+
+      <div class="service">
+        <h2>👻 Anonymity Setup</h2>
+        <p>We help you set up anonymous environments, including VPN chains, Whonix, and secure hosting.</p>
+        <a href="contact.html" class="request-btn">📩 Request</a>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="footer">&copy; 2025 XVoid | Crafted in the Shadows by Lord0x.</div>
+
+</body>
+</html>
